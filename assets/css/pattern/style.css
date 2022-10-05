@@ -4,6 +4,6 @@
 }
 
 body{
-    background: var(--fundo-preto);
+    background: var(--fundo);
     color: var(--cor-branca);
 }
