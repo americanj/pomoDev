@@ -4,3 +4,19 @@
     /*height: 100vh;*/
     
 }
+
+.start{
+    background: green;
+    color: white;
+}
+
+.stop{
+    background: red;
+    color: white;
+    
+}
+
+.next{
+    background: yellow;
+    
+}
