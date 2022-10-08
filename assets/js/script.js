@@ -20,43 +20,37 @@ const bntNext = document.querySelector('.next');
 let segundos = 60;
 let minutos = 24;
 
-/*
-function segundo() {
-    segundos--
+function pomoTime25() {
 
-    if (segundos == 60) {
-        minutos--
-        telaMinutos.innerHTML = minutos;
-        segundos = 0;
-    }
-
-    if (segundos <= 9)
-        telaSegundos.innerHTML = "0" + segundos
-    else if (segundos > 9)
-        telaSegundos.innerHTML = segundos
-}*/
-
-function segundo() {
-    segundos--
-    telaMinutos.innerHTML = minutos;
+    segundos--;
+    mostraMinutosTela();
 
     if (segundos == 0) {
-        minutos--
-
-        telaMinutos.innerHTML = minutos;
+        minutos--;
+        mostraMinutosTela();
         segundos = 59;
     }
 
-    //segundos
-    if (segundos <= 9) {
-        telaSegundos.innerHTML = "0" + segundos
 
-    } else if (segundos > 9)
-        telaSegundos.innerHTML = segundos
+    if (segundos > 9) {
+        mostraSegundosTela()
+
+    } else {
+        mostraSegundosTelaComZero();
+    }
+
 
     //minutos
-    if (minutos <= 9)
-        telaMinutos.innerHTML = "0" + minutos
+    if (minutos < 10)
+        mostraMinutosTelaComZero();
+
+
+    //parar    
+    if (minutos == 0 && segundos == 1) {
+        console.log("gg");
+        clearInterval(intervalID);
+    }
+
 }
 
 var intervalID;
@@ -66,8 +60,8 @@ bntIniciar.addEventListener('click', (evento) => {
     console.log("Iniciar");
 
     intervalID = setInterval(function () {
-        segundo();
-    }, 1000);
+        pomoTime25()
+    }, 10);
 
 
     bntStop.style.display = "inline";
@@ -76,10 +70,10 @@ bntIniciar.addEventListener('click', (evento) => {
 })
 
 bntStop.addEventListener('click', () => {
-  
+
     console.log("Parar");
     clearInterval(intervalID);
-    
+
     bntIniciar.style.display = "inline";
     bntStop.style.display = "none"
 })
@@ -88,3 +82,18 @@ bntStop.addEventListener('click', () => {
 
 
 
+function mostraMinutosTela() {
+    telaMinutos.innerHTML = minutos;
+}
+
+function mostraSegundosTela() {
+    telaSegundos.innerHTML = segundos
+}
+
+function mostraMinutosTelaComZero() {
+    telaMinutos.innerHTML = "0" + minutos
+}
+
+function mostraSegundosTelaComZero() {
+    telaSegundos.innerHTML = "0" + segundos
+}
