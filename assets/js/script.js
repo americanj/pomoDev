@@ -10,8 +10,8 @@ const telaMinutos = document.querySelector('#minuto');
 const telaDivisor = document.querySelector('#divisor');
 
 
-const bntIniciar = document.querySelector('.start');
-const bntStop = document.querySelector('.stop');
+const bntIniciar = document.querySelector('.modal__controles--start');
+const bntStop = document.querySelector('.modal__controles--stop');
 
 bntStop.style.display = "none";
 const bntNext = document.querySelector('.next');
@@ -19,6 +19,8 @@ const bntNext = document.querySelector('.next');
 
 let segundos = 60;
 let minutos = 24;
+
+var intervalID;
 
 function pomoTime25() {
 
@@ -53,9 +55,9 @@ function pomoTime25() {
 
 }
 
-var intervalID;
 
-bntIniciar.addEventListener('click', (evento) => {
+
+bntIniciar.addEventListener('click', () => {
 
     console.log("Iniciar");
 

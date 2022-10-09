@@ -1,0 +1,37 @@
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        height: 4rem;
+
+        /*display: flex;
+    flex-direction: row;*/
+        /*border: solid 1px white;*/
+        /*width: 100%;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--cor-menu);
+
+
+
+    }
+
+    .cabecalho__navegacao {
+
+        /*background: var(--cor-menu);*/
+
+    }
+    .cabecalho__navegacao ul {
+        margin: 0;
+    }
+
+    .cabecalho__link {
+        border: solid 1px red;
+        display: inline-block;
+        font-size: 40px;
+        margin: 0 50px;
+        /*text-align: center;*/
+        font-family: var(--font-opensans);
+
+        /*display: inline-block;*/
+    }
+}

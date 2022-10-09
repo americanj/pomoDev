@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
 :root {
-    --fundo: #282A36;
+    /*--cor-fundo: #093959;*/
+    --cor-fundo: #460228;
     --cor-branca: white;
+    --cor-menu: #1B262C;
+
+    --font-mine: 'Silkscreen', cursive;
+    --font-opensans: 'Open Sans', sans-serif;
+    --font-langar: 'Langar', cursive;
 }
 
-body{
-    background: var(--fundo);
+body {
+    background: var(--cor-fundo);
     color: var(--cor-branca);
 }
+
+.container {
+    /*padding-right: 6%;
+    padding-left: 0%;*/
+
+}
+
+/*PC*/
+@media screen and (min-width: 1024px) {}

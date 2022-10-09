@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,70 @@
     <link rel="stylesheet" href="assets/css/pattern/reset.css">
     <link rel="stylesheet" href="assets/css/pattern/style.css">
 
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <link rel="stylesheet" href="assets/css/container-principal.css">
+
+
     <title>PomoDev - Produtividade ++</title>
 </head>
+
 <body>
-    <section class="container-principal">
+    <header class="cabecalho container">
+        <nav class="cabecalho__navegacao">
+            <ul>
+                <li class="cabecalho__link"><a href="">test1</a></li>
+                <li class="cabecalho__link"><a href="">test1</a></li>
+                <li class="cabecalho__link"><a href="">test1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="modal container">
+        <nav class="modal__navegacao">
+            <ul class="modal__container-links">
+                <li class="modal__link">Pomodoro</li>
+                <li class="modal__link">Descanso Curto</li>
+                <li class="modal__link">Descanso Longo</li>
+            </ul>
+        </nav>
+        <section class="modal__pomodo">
+            <div class="modal__cronometro">
+                <span class="modal__cronometro--minuto" data-minuto="" id="minuto">25</span>
+                <span class="modal__cronometro--divisor" id="divisor">:</span>
+                <span class="modal__cronometro--segundo" id="segundo">00</span>
+                
+                <div class="modal__controles">
+                    <button class="modal__controles--start">iniciar</button>
+                    <button class="modal__controles--stop">parar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal__descanso-curto">
+            <!--<span id="minuto">5</span> <span id="divisor">:</span> <span id="segundo">00</span>
+            <button class="start">start</button>
+            <button class="stop">stop</button>-->
+        </section>
+
+        <section class="modal__descanso-longo">
+            <!--<span id="minuto">15</span> <span id="divisor">:</span> <span id="segundo">00</span>
+            <button class="start">start</button>
+            <button class="stop">stop</button>-->
+        </section>
+    </main>
+
+
+
+    <!--<section class="container-principal">
         <span id="minuto">25</span> <span id="divisor">:</span> <span id="segundo">00</span>
         <button class="start">start</button>
         <button class="stop">stop</button>
         <button class="next">next</button>
-    </section>
+    </section>-->
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

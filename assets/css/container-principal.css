@@ -1,6 +1,6 @@
 .container-principal{
     border: solid 1px red;
-    height: calc(100vh - 2px);
+    /*height: calc(100vh - 2px);*/
     /*height: 100vh;*/
     
 }
@@ -20,3 +20,4 @@
     background: yellow;
     
 }
+
