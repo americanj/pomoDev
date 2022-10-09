@@ -63,7 +63,7 @@ bntIniciar.addEventListener('click', () => {
 
     intervalID = setInterval(function () {
         pomoTime25()
-    }, 10);
+    }, 1000);
 
 
     bntStop.style.display = "inline";

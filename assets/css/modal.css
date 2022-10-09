@@ -1,13 +1,14 @@
-
 .modal {
+    background: rgba(255, 255, 255, 0.028);
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
     margin: 0 auto;
-    border: solid white 1px;
-    width: 600px;
-    height: 270px;
+    border: solid rgba(255, 255, 255, 0.189) 1px;
+    width: 650px;
+    height: auto;
 
     margin-top: 5rem;
 }
@@ -23,59 +24,58 @@
     
 }*/
 
-.modal__container-links{
+.modal__container-links {
     display: flex;
     flex-direction: row;
     border: solid 1px red;
-    width: 500px;
+    width: 600px;
     margin: 0;
     justify-content: space-between;
-    
-    
-    
-    
+
+
+
+
 
 }
 
-.modal__container-links {
-    
-}
+.modal__container-links {}
 
 .modal__link {
     list-style: none;
     /*text-align: center;*/
     /*padding-right: 100px;*/
-    
+
     /*display: inline-block;*/
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: var(--font-opensans);
     font-family: var(--font-langar);
     font-weight: 400;
 }
 
-.modal__pomodo{
+.modal__pomodo {
+    
+    border: solid 1px pink;
     margin-top: 3rem;
 }
 
-.modal__cronometro{
-   
+.modal__cronometro {}
+
+.modal__cronometro--minuto {
+    font-size: 7rem;
+    font-family: var(--font-clock);
 }
 
-.modal__cronometro--minuto{
+.modal__cronometro--divisor {
     font-size: 7rem;
-    font-family: var(--font-langar);
+    font-family: var(--font-clock);
 }
 
-.modal__cronometro--divisor{
+.modal__cronometro--segundo {
     font-size: 7rem;
-    font-family: var(--font-langar);
-}
-.modal__cronometro--segundo{
-    font-size: 7rem;
-    font-family: var(--font-langar);
+    font-family: var(--font-clock);
 }
 
-.modal__controles{
+.modal__controles {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -84,33 +84,38 @@
 }
 
 
-.modal__controles--start{
-	all: unset;
+.modal__controles--start {
+    all: unset;
     text-transform: uppercase;
     font-family: var(--font-langar);
     padding: 10px 50px;
     background: green;
-	cursor: pointer;
-	
+    cursor: pointer;
+
     display: block;
     font-size: 1.5rem;
 
     /*width: 50px;*/
     text-align: center;
-    
+
 }
 
-.modal__controles--stop{
-	all: unset;
+.modal__controles--stop {
+    all: unset;
     text-transform: uppercase;
     font-family: var(--font-langar);
     padding: 10px 50px;
     background: red;
-	cursor: pointer;
+    cursor: pointer;
     font-size: 1.5rem;
 
     display: block;
 
     /*width: 50px;*/
     text-align: center;
+}
+
+.modal__imagem--conversando {
+    margin-top: 5rem;
+    width: 400px;
 }

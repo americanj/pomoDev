@@ -4,15 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 
+@font-face {
+    font-family: 'clock';
+    src: url('../../fonts/alarm-clock.ttf') format('truetype');
+}
+
 :root {
     /*--cor-fundo: #093959;*/
-    --cor-fundo: #460228;
+    --cor-fundo: #000000;
     --cor-branca: white;
     --cor-menu: #1B262C;
 
     --font-mine: 'Silkscreen', cursive;
     --font-opensans: 'Open Sans', sans-serif;
     --font-langar: 'Langar', cursive;
+    --font-clock: 'clock', cursive;
 }
 
 body {
@@ -25,6 +31,8 @@ body {
     padding-left: 0%;*/
 
 }
+
+
 
 /*PC*/
 @media screen and (min-width: 1024px) {}
