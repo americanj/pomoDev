@@ -13,14 +13,23 @@ const btnIniciarPomodoro = document.querySelector('[data-btnIniciarPomodoro]');
 const btnPararPomodoro = document.querySelector('[data-btnPararPomodoro]');
 //btnPararPomodoro.classList.add('ocultar');
 
-const elementoMinuto = document.querySelector('[data-minuto]');
+//const elementoMinuto = document.querySelector('[data-minuto]');
 
 
-const telaSegundos = document.querySelector('#segundo');
+const telaSegundosPomodoro = document.querySelector('#segundoPomodoro');
+const telaMinutosPomodoro = document.querySelector('#minutoPomodoro');
+const telaDivisorPomodoro = document.querySelector('#divisorPomodoro');
 
-const telaMinutos = document.querySelector('#minuto');
+const telaSegundosDescansoCurto = document.querySelector('#segundoDescansoCurto');
+const telaMinutosDescansoCurto = document.querySelector('#minutoDescansoCurto');
+const telaDivisorDescansoCurto = document.querySelector('#divisorDescansoCurto');
 
-const telaDivisor = document.querySelector('#divisor');
+
+
+
+
+const btnIniciarDescansoCurto = document.querySelector('[data-btnIniciarDescansoCurto]');
+const btnPararDescansoCurto = document.querySelector('[data-btnPararDescansoCurto]');
 
 
 

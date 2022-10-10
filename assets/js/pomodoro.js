@@ -12,11 +12,19 @@ abaPomodoro.addEventListener("click", function () {
     console.log("dnv");
 
     abaPomodoro.classList.add('aplicarBoldFont');
+    
+
+    containerPomodoro.classList.add('modal__borda-tema-padrao');
+    containerPomodoro.classList.add('modal__principal--semBackground');
+    telaMinutosPomodoro.classList.remove('modal__cronometro--minuto-vermelho');
+
     caixaPomodoro.classList.remove('ocultar');
     caixaPomodoro.classList.add('bordaPomodoro');
 
     abaDescansoCurto.classList.remove('aplicarBoldFont');
     caixaDescansoCurto.classList.add('ocultar');
+
+
 })
 
 
@@ -63,13 +71,13 @@ function pomoTime25() {
 
 btnIniciarPomodoro.addEventListener('click', () => {
 
-    elementoMinuto.classList.add('modal__cronometro--minuto-vermelho');
+    telaMinutosPomodoro.classList.add('modal__cronometro--minuto-vermelho');
     containerPomodoro.classList.add('modal__borda--tema-vermlho');
     console.log("Iniciar");
 
     intervalID = setInterval(function () {
         pomoTime25()
-    }, 10);
+    }, 1);
 
 
     btnPararPomodoro.style.display = "inline";
@@ -91,19 +99,19 @@ btnPararPomodoro.addEventListener('click', () => {
 
 
 function mostraMinutosTela() {
-    telaMinutos.innerHTML = minutos;
+    telaMinutosPomodoro.innerHTML = minutos;
 }
 
 function mostraSegundosTela() {
-    telaSegundos.innerHTML = segundos
+    telaSegundosPomodoro.innerHTML = segundos
 }
 
 function mostraMinutosTelaComZero() {
-    telaMinutos.innerHTML = "0" + minutos
+    telaMinutosPomodoro.innerHTML = "0" + minutos
 }
 
 function mostraSegundosTelaComZero() {
-    telaSegundos.innerHTML = "0" + segundos
+    telaSegundosPomodoro.innerHTML = "0" + segundos
 }
 
 function finalizarPomodoro() {

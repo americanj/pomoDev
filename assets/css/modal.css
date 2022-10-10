@@ -20,6 +20,20 @@
     transition: 1.5s all;
 }
 
+.modal__borda--tema-azul {
+    background: #00ffff1e;
+    border: solid #00ffff 2px;
+    transition: 1.5s all;
+}
+
+.modal__borda-tema-padrao {
+    border: solid #ffffff 2px;
+}
+
+.modal__principal--semBackground {
+    background: none;
+}
+
 
 
 /*.modal__navegacao ul {
@@ -62,8 +76,8 @@
 }
 
 
-.modal__pomodo {
-
+.modal__pomodo,
+.modal__descanso-curto {
     border: solid 1px pink;
     margin-top: 3rem;
 }
