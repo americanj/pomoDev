@@ -29,40 +29,51 @@
     </header>
 
 
-    <main class="modal container">
+    <main class="modal container" data-containerPomodoro="">
         <nav class="modal__navegacao">
             <ul class="modal__container-links">
-                <li class="modal__link">Pomodoro</li>
-                <li class="modal__link">Descanso Curto</li>
+                <li class="modal__link" data-btnPomodoro="">Pomodoro</li>
+                <li class="modal__link" data-btnDescansoCurto="">Descanso Curto</li>
                 <li class="modal__link">Descanso Longo</li>
             </ul>
         </nav>
-        <section class="modal__pomodo">
+        <section class="modal__pomodo ocultar" data-caixaPomodoro="">
             <div class="modal__cronometro">
-                <span class="modal__cronometro--minuto" data-minuto="" id="minuto">25</span>
+                <span class="modal__cronometro--minuto"  id="minuto" data-minuto="">25</span>
                 <span class="modal__cronometro--divisor" id="divisor">:</span>
                 <span class="modal__cronometro--segundo" id="segundo">00</span>
-                
+
                 <div class="modal__controles">
-                    <button class="modal__controles--start">iniciar</button>
-                    <button class="modal__controles--stop">parar</button>
+                    <button class="modal__controles--start" data-btnIniciarPomodoro="">iniciar</button>
+                    <button class="modal__controles--stop" data-btnPararPomodoro="">parar</button>
                 </div>
             </div>
         </section>
 
-        <section class="modal__descanso-curto">
-            <!--<span id="minuto">5</span> <span id="divisor">:</span> <span id="segundo">00</span>
-            <button class="start">start</button>
-            <button class="stop">stop</button>-->
+        <section class="modal__descanso-curto ocultar" data-caixaDescansoCurto>
+            <span class="modal__cronometro--minuto" data-minuto="" id="minuto">05</span>
+            <span class="modal__cronometro--divisor" id="divisor">:</span>
+            <span class="modal__cronometro--segundo" id="segundo">00</span>
+
+            <div class="modal__controles">
+                <button class="modal__controles--start" >iniciar</button>
+                <button class="modal__controles--stop" >parar</button>
+            </div>
         </section>
 
-        <section class="modal__descanso-longo">
-            <!--<span id="minuto">15</span> <span id="divisor">:</span> <span id="segundo">00</span>
-            <button class="start">start</button>
-            <button class="stop">stop</button>-->
+        <section class="modal__descanso-longo ocultar">
+            <span class="modal__cronometro--minuto" data-minuto="" id="minuto">25</span>
+            <span class="modal__cronometro--divisor" id="divisor">:</span>
+            <span class="modal__cronometro--segundo" id="segundo">00</span>
+
+            <div class="modal__controles">
+                <button class="modal__controles--start">iniciar</button>
+                <button class="modal__controles--stop">parar</button>
+            </div>
         </section>
 
-        <img class="modal__imagem--conversando" src="assets/img/cafe-com-amigos.svg" alt="">
+        <!--<img class="modal__imagem--conversando" 
+            src="assets/img/cafe-com-amigos.svg" alt="">-->
     </main>
 
 
@@ -75,6 +86,8 @@
     </section>-->
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/pomodoro.js"></script>
+    <script src="assets/js/descanso-curto.js"></script>
 </body>
 
 </html>
