@@ -58,16 +58,29 @@ function pomoTime25() {
         mostraMinutosTelaComZero();
 
 
-    //Fim do pomodoro    
-    if (minutos == 0 && segundos == 1) {
-        //finalizarPomodoro();
-        console.log("gg");
-        clearInterval(intervalID);
-    }
 
     //verificação pomodoro interrompido
     if (minutos < 24 && minutos > 22)
         sessionStorage.setItem('pomodoro', JSON.stringify(minutos))
+
+
+
+    //Fim do pomodoro    
+    if (minutos == 0 && segundos == 1) {
+
+        console.log("gg");
+        clearInterval(intervalID);
+
+
+        sessionStorage.setItem('recarregarPomodoro', JSON.stringify("sim"))
+        location.reload();
+
+
+
+
+
+
+    }
 
 
 }
@@ -82,7 +95,10 @@ btnIniciarPomodoro.addEventListener('click', () => {
 
     intervalID = setInterval(function () {
         pomoTime25()
+
+
     }, 1);
+
 
 
     btnPararPomodoro.style.display = "inline";
@@ -101,6 +117,17 @@ btnPararPomodoro.addEventListener('click', () => {
 
 
 
+const sessionRecupera = sessionStorage.getItem('recarregarPomodoro')
+
+
+const sessionRecuperaParseado = JSON.parse(sessionRecupera)
+
+console.log(sessionRecuperaParseado);
+
+if (sessionRecuperaParseado === "sim") {
+    finalizarPomodoro();
+    sessionStorage.removeItem('recarregarPomodoro');
+}
 
 
 function mostraMinutosTela() {

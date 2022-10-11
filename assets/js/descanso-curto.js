@@ -53,10 +53,6 @@ abaDescansoCurto.addEventListener('click', function () {
     //containerPomodoro.classList.add('modal__principal--semBackground');
     //telaMinutosPomodoro.classList.remove('modal__cronometro--minuto-vermelho');
 
-
-
-
-
 })
 
 iniciarCronometroDescansoCurto();
