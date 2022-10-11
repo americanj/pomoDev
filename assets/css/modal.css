@@ -1,3 +1,6 @@
+
+
+
 .modal {
     /*background: rgba(255, 255, 255, 0.028);*/
     display: flex;
@@ -13,12 +16,14 @@
     /*background: #ffffff29;*/
 }
 
-
+/*
 .modal__borda--tema-vermlho {
     background: #ff000016;
     border: solid red 2px;
     transition: 1.5s all;
-}
+}*/
+
+
 
 .modal__borda--tema-azul {
     background: #00ffff1e;
@@ -95,6 +100,14 @@
     transition: 1s all;
 }
 
+.modal__borda--tema-vermlho {
+    background: #ff000016;
+    border: solid red 2px;
+    transition: 1.5s all;
+}
+
+
+
 .modal__cronometro--minuto-azul {
     color: #00ffff;
     transition: 1s all;
@@ -151,7 +164,17 @@
     text-align: center;
 }
 
-.modal__imagem--conversando {
-    margin-top: 5rem;
-    width: 400px;
+
+
+/*javscript*/
+
+.modal__borda--tema-branco {
+    background: none;
+    border: solid white 2px;
+    transition: 1.5s all;
+}
+
+.modal__cronometro--minuto-branco {
+    color: white;
+    transition: 1s all;
 }

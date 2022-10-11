@@ -12,11 +12,11 @@ abaPomodoro.addEventListener("click", function () {
     console.log("dnv");
 
     abaPomodoro.classList.add('aplicarBoldFont');
-    
 
-    containerPomodoro.classList.add('modal__borda-tema-padrao');
-    containerPomodoro.classList.add('modal__principal--semBackground');
-    telaMinutosPomodoro.classList.remove('modal__cronometro--minuto-vermelho');
+
+    //containerPomodoro.classList.add('modal__borda-tema-padrao');
+    //containerPomodoro.classList.add('modal__principal--semBackground');
+    //telaMinutosPomodoro.classList.remove('modal__cronometro--minuto-vermelho');
 
     caixaPomodoro.classList.remove('ocultar');
     caixaPomodoro.classList.add('bordaPomodoro');
@@ -60,10 +60,15 @@ function pomoTime25() {
 
     //Fim do pomodoro    
     if (minutos == 0 && segundos == 1) {
-        finalizarPomodoro();
+        //finalizarPomodoro();
         console.log("gg");
         clearInterval(intervalID);
     }
+
+    //verificação pomodoro interrompido
+    if (minutos < 24 && minutos > 22)
+        sessionStorage.setItem('pomodoro', JSON.stringify(minutos))
+
 
 }
 
