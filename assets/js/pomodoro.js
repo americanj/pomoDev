@@ -72,13 +72,10 @@ function pomoTime25() {
         clearInterval(intervalID);
 
 
+        //seta e recarrega e abaixo recebe o sim
         sessionStorage.setItem('recarregarPomodoro', JSON.stringify("sim"))
+        
         location.reload();
-
-
-
-
-
 
     }
 
@@ -91,13 +88,14 @@ btnIniciarPomodoro.addEventListener('click', () => {
 
     telaMinutosPomodoro.classList.add('modal__cronometro--minuto-vermelho');
     containerPomodoro.classList.add('modal__borda--tema-vermlho');
-    console.log("Iniciar");
+    console.log("Iniciar pomodoro");
 
     intervalID = setInterval(function () {
         pomoTime25()
+        
 
 
-    }, 1);
+    }, 0.1);
 
 
 
@@ -118,16 +116,23 @@ btnPararPomodoro.addEventListener('click', () => {
 
 
 const sessionRecupera = sessionStorage.getItem('recarregarPomodoro')
-
-
 const sessionRecuperaParseado = JSON.parse(sessionRecupera)
 
-console.log(sessionRecuperaParseado);
-
-if (sessionRecuperaParseado === "sim") {
+if (sessionRecuperaParseado == "sim") {
     finalizarPomodoro();
-    sessionStorage.removeItem('recarregarPomodoro');
+    //sessionStorage.clear();
 }
+
+const abaDescansoCurtoInterromper = sessionStorage.getItem('abaDescansoCurtoInterromper')
+const abaDescansoCurtoInterromperParseado = JSON.parse(abaDescansoCurtoInterromper)
+
+if (abaDescansoCurtoInterromperParseado == "sim") {
+    ocultarPomodoro();
+    mostrarDecansoCurto();
+}
+
+
+
 
 
 function mostraMinutosTela() {
@@ -150,6 +155,23 @@ function finalizarPomodoro() {
     abaPomodoro.classList.remove('aplicarBoldFont');
     caixaPomodoro.classList.add('ocultar');
 
+    abaDescansoCurto.classList.add('aplicarBoldFont');
+    caixaDescansoCurto.classList.remove('ocultar');
+    
+    sessionStorage.clear();
+}
+
+function ocultarPomodoro() {
+    abaPomodoro.classList.remove('aplicarBoldFont');
+
+    caixaPomodoro.classList.add('ocultar');
+
+    //containerPomodoro.classList.add('modal__borda--tema-branco');
+
+    //telaMinutosPomodoro.classList.add('modal__cronometro--minuto-branco');
+}
+
+function mostrarDecansoCurto() {
     abaDescansoCurto.classList.add('aplicarBoldFont');
     caixaDescansoCurto.classList.remove('ocultar');
 }

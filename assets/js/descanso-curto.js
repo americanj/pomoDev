@@ -13,39 +13,45 @@ btnPararDescansoCurto.style.display = 'none'
 
 abaDescansoCurto.addEventListener('click', function () {
 
-    console.log(sessionStorage.length);
 
+    const sessionRecupera = sessionStorage.getItem('pomodoro')
+    const sessionRecuperaParseado = JSON.parse(sessionRecupera)
 
-    if (sessionStorage.length == 1) {
+    if (sessionRecuperaParseado == 23) {
 
         let logComResposta = window.confirm("Deseja realmente interromper o processo?");
 
         if (logComResposta == true) {
+            sessionStorage.setItem('abaDescansoCurtoInterromper', JSON.stringify("sim"))
+
+            location.reload();
             console.log("ir aba descanso curto");
-            mostrarPomodoro()
+
+            
+            //ocultarPomodoro()
+            //mostrarDecansoCurto();
+
             sessionStorage.removeItem('pomodoro');
         }
     } else {
-        mostrarPomodoro()
+        ocultarPomodoro();
+        mostrarDecansoCurto() 
     }
 
 
-
-
-
-
-
-
-    function mostrarPomodoro() {
+    function ocultarPomodoro() {
         abaPomodoro.classList.remove('aplicarBoldFont');
-        abaDescansoCurto.classList.add('aplicarBoldFont');
-        caixaDescansoCurto.classList.remove('ocultar');
 
         caixaPomodoro.classList.add('ocultar');
 
-        containerPomodoro.classList.add('modal__borda--tema-branco');
+        //containerPomodoro.classList.add('modal__borda--tema-branco');
 
-        telaMinutosPomodoro.classList.add('modal__cronometro--minuto-branco');
+        //telaMinutosPomodoro.classList.add('modal__cronometro--minuto-branco');
+    }
+
+    function mostrarDecansoCurto() {
+        abaDescansoCurto.classList.add('aplicarBoldFont');
+        caixaDescansoCurto.classList.remove('ocultar');
     }
 
 
@@ -115,7 +121,7 @@ function iniciarCronometroDescansoCurto() {
 
         intervalDescansoCurto = setInterval(function () {
             descansoCurto();
-        }, 100);
+        }, 1);
 
 
         btnPararDescansoCurto.style.display = "inline";
